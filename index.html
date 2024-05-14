@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies App</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form id="movie-form">
+        <div class="form-group">
+          <label for="title">Title
+          <input type="text" required id="title" minlength="2">
+        </div>
+        
+        <div class="form-group">
+          <label for="rating">Rating
+          <input type="number" required  min="0" max="10" id="rating">
+        </div>
+          
+        <div class="form-group">
+          <button type="submit" class="btn">Submit</button>
+        </div>
+      </form>
+
+      <table class="table">
+        <thead>
+            <!-- scope=col is for screen readers to determine it's a column -->
+              <th scope="col">Title <button>A-Z</button><i id="title"></i></th>
+              <th scope="col">Rating <button>High-Low</button><i id="rating"></i></th>
+              <th scope="col">Delete </i></th>
+            </tr>
+          </thead>
+        <tbody id="movie-table" class="table"></tbody></table>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
